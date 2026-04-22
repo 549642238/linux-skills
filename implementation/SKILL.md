@@ -67,7 +67,9 @@ Strong success criteria let you loop independently. Weak criteria ("make it work
 
 ### 6. 确保修改后的代码可以编译成功，静态检查不能有错误
 
+### 7. 如果补丁是修复问题或性能优化相关的，commit message按照问题现象描述、问题触发流程和修复方案来写。参考会话中之前讨论过生成的markdown文件。
+
 ## 执行流程
-1. 修改代码，并用git生成提交，提交的commit message格式遵守社区规范，参考Documentation/process/submitting-patches.rst。此外，commit message内容要有问题描述、触发流程和修复方法说明
+1. 修改代码，并用git生成提交，提交的commit message格式遵守社区规范，参考Documentation/process/submitting-patches.rst。
 2. 生成补丁，对所有新生成的提交做patch生成，如果有多笔提交，需要生成0号补丁(git format-patch -s -n$num --cover-letter --subject-prefix="PATCH")
 3. 对补丁做校验，./script/checkpatch.pl <patch>，确保生成的补丁没有告警和错误
